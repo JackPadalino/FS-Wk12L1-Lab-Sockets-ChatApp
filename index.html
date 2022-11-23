@@ -42,6 +42,13 @@
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
       });
+
+      socket.on('user joined', function() {
+        var item = document.createElement('li');
+        item.textContent = 'You have entered the chat.';
+        messages.appendChild(item);
+        window.scrollTo(0, document.body.scrollHeight);
+      });
     </script>
   </body>
 </html>
